@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'GilroyExtraBold';
-  src: url('../fonts/gilroyextrabold.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/gilroyextrabold.woff') format('woff'); /* Pretty Modern Browsers */
+  src: url('../fonts/web/gilroyextrabold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/web/gilroyextrabold.woff') format('woff'); /* Pretty Modern Browsers */
 }
 
 @font-face {
   font-family: 'GilroyLight';
-  src: url('../fonts/gilroylight.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/gilroylight.woff') format('woff'); /* Pretty Modern Browsers */
+  src: url('../fonts/web/gilroylight.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/web/gilroylight.woff') format('woff'); /* Pretty Modern Browsers */
 }
 
 body {
@@ -74,7 +74,7 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     margin: 0;
     margin-bottom: 50px;
     padding: 0;
@@ -137,7 +137,7 @@ header {
 }
 
 .search input[type="search"]:focus + .search-btn {
-   display: block; 
+   display: block;
 }
 
 .search-btn:hover {
@@ -162,7 +162,7 @@ header {
     display: inline-block;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 15px;
-    line-height: 30px; 
+    line-height: 30px;
     font-weight: 300;
     color: #000000;
     text-align: left;
@@ -223,7 +223,7 @@ header {
 .catalog-menu-btn {
     position: relative;
     display: block;
-    width: 230px;
+    width: 250px;
     margin: 0;
     padding: 5px;
     padding-right: 30px;
@@ -248,7 +248,7 @@ header {
     height: 2px;
     background-color: #b8a974;
 }
-    
+
 .catalog-menu-btn::after {
     transform: rotate(90deg);
 }
@@ -1104,7 +1104,7 @@ footer {
 
 .about-us {
     width: 560px;
-    margin-right: 40px; 
+    margin-right: 40px;
 }
 
 .about-us h3,
@@ -1330,7 +1330,7 @@ footer {
     position: relative;
     z-index: 2;
     margin: 0;
-    margin-left: 60px; 
+    margin-left: 60px;
     margin-bottom: 100px;
     padding: 0;
     padding-top: 25px;
@@ -1512,7 +1512,7 @@ fieldset input:focus + label {
     position: relative;
     z-index: 2;
     margin: 0;
-    margin-left: 60px;
+    margin-left: 70px;
     margin-bottom: 100px;
     padding: 0;
     padding-top: 23px;
@@ -1533,7 +1533,10 @@ fieldset input:focus + label {
 }
 
 .sorting-list {
+  flex-grow: 1;
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -1547,6 +1550,10 @@ fieldset input:focus + label {
     margin-right: 0;
 }
 
+.sorting-list .sorting-arrow-up {
+  margin-left: auto;
+}
+
 .sorting-list a {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 14px;
@@ -1554,4 +1561,120 @@ fieldset input:focus + label {
     font-weight: 400;
     text-align: left;
     color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-list-container {
+  width: 760px;
+  margin: 0;
+  margin-left: 70px;
+  padding: 0;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0;
+  margin-left: -40px;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-list li {
+  flex-shrink: 0;
+  margin: 0;
+  margin-left: 40px;
+  margin-bottom: 45px;
+  padding: 0;
+}
+
+.catalog-item-block {
+  width: 360px;
+  margin-bottom: 30px;
+}
+
+.catalog-item-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+.name-price-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.name-price-block a {
+  max-width: 260px;
+}
+
+.product-name h3 {
+  margin: 0;
+  padding: 0;
+  font-family: 'GilroyExtraBold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  text-align: left;
+  color: #000000;
+}
+
+.product-price {
+  font-family: 'GilroyLight', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: right;
+  color: #464646;
+}
+
+.pagination-container {
+  width: 760px;
+  margin-left: 70px;
+  padding: 25px 30px;
+  background-color: #ebebeb;
+  box-sizing: border-box;
+}
+
+.pagination-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination-list a {
+  font-family: 'GilroyExtraBold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 2px;
+  color: #000000;
+}
+
+.pagination-list .page-num {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.pagination-list li {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.pagination-list li:first-child {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.pagination-list li:last-child {
+  margin-left: auto;
+  margin-right: 0;
 }
