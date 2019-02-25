@@ -6,14 +6,14 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="inner-page">
   <header>
     <div class="layout-positioner header-wrapper">
+      <a class="logo" href="index.html" aria-label="Logotype Device">
+        <img src="img/logo.svg" width="163" height="35" alt="Device">
+      </a>
       <div class="top-row">
         <div class="top-row-left">
-          <a class="logo" href="index.html" aria-label="Logotype Device">
-            <img src="img/logo.svg" alt="Device">
-          </a>
           <div class="search">
             <form action="device.html" method="post">
                 <span>
@@ -38,10 +38,11 @@
                 C9.985,1.561,8.425,0,6.5,0S3.015,1.561,3.015,3.485c0,1.264,0.68,2.361,1.688,2.972C2.106,7.163,0.194,9.357,0.032,12z"/>
               </svg>
             </span>
-            <a class="user-account-btn visually-hidden" href="#">
+            <a class="user-account-btn" href="#">
               Валентин Петухов
             </a>
-            <a class="login-btn" href="#">Войти</a>
+            <a class="login-btn visually-hidden" href="#">Войти</a>
+            <a class="logout-btn" href="#">Выйти</a>
           </div>
           <div class="compaire">
             <a class="compaire-btn" href="#">
@@ -219,6 +220,10 @@
                       <h3>Любительская селфи-палка</h3>
                     </a>
                     <span class="product-price">500 руб.</span>
+                  </div>
+                  <div class="product-btn-block">
+                    <a href="#" class="in-cart-btn">В корзину</a>
+                    <a href="#" class="to-compaire">Добавить к сравнению</a>
                   </div>
                 </li>
                 <li>
