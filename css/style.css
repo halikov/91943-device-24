@@ -1556,8 +1556,16 @@ fieldset input:focus + label {
     margin-right: 0;
 }
 
-.sorting-list .sorting-arrow-up {
+.sorting-arrows polygon {
+  fill: #000000;
+}
+
+.sorting-list .arrow-up {
   margin-left: auto;
+}
+
+.sorting-arrows a {
+  opacity: 0.3;
 }
 
 .sorting-list a {
@@ -1567,6 +1575,26 @@ fieldset input:focus + label {
     font-weight: 400;
     text-align: left;
     color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-list a:hover,
+.sorting-list a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.active-sorting-item a,
+.sorting-list a:active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.sorting-arrows a:hover,
+.sorting-arrows a:focus {
+  opacity: 0.6;
+}
+
+.active-arrow a,
+.sorting-arrows a:active {
+  opacity: 1;
 }
 
 .catalog-list-container {
@@ -1581,7 +1609,7 @@ fieldset input:focus + label {
   flex-wrap: wrap;
   flex-direction: row;
   margin: 0;
-  margin-left: -40px;
+  margin-left: -35px;
   padding: 0;
   list-style: none;
 }
@@ -1599,6 +1627,7 @@ fieldset input:focus + label {
 }
 
 .catalog-item-block {
+  position: relative;
   width: 360px;
   margin-bottom: 30px;
 }
@@ -1606,6 +1635,27 @@ fieldset input:focus + label {
 .catalog-item-block img {
   max-width: 100%;
   height: auto;
+}
+
+.catalog-item-block .flag-new {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  padding: 17px 13px;
+  font-family: 'GilroyExtraBold', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  border: 2px solid rgba(205, 57, 67, 0.1);
+  box-sizing: border-box;
 }
 
 .product-btn-block {
