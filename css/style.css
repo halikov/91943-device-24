@@ -221,7 +221,13 @@ header {
     box-sizing: border-box;
 }
 
-.catalog-menu-btn {
+.menu-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.catalog-menu-title {
     position: relative;
     display: block;
     width: 250px;
@@ -239,26 +245,54 @@ header {
     box-sizing: border-box;
 }
 
-.catalog-menu-btn::after,
-.catalog-menu-btn::before {
+.catalog-menu-title:hover,
+.catalog-menu-title:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.catalog-menu-title:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-button {
+  padding: 16px;
+  border: none;
+  background: none;
+}
+
+.menu-button-closed {
+  position: relative;
+  top: 2px;
+  display: block;
+  width: 16px;
+  height: 2px;
+  margin: 0;
+  background-color: #b8a974;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.menu-button-closed::before {
     position: absolute;
-    top: 15px;
+    top: 0;
     right: 0;
     content: "";
     width: 16px;
     height: 2px;
     background-color: #b8a974;
-}
-
-.catalog-menu-btn::after {
     transform: rotate(90deg);
 }
 
-.catalog-menu-btn:hover {
+.menu-button-opened::before {
+  display: none;
+}
+
+.menu-btn:hover {
     color: rgba(0, 0, 0, 0.6);
 }
 
-.catalog-menu-btn:active {
+.menu-btn:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -284,7 +318,6 @@ header {
     align-items: flex-start;
     flex-shrink: 0;
     width: 100%;
-    /* height: 131px; */
     margin: 0;
     padding: 0;
     padding-bottom: 23px;
@@ -295,23 +328,23 @@ header {
     transition: ease-in-out 0.3s;
 }
 
+.catalog-menu .catalog-menu-list {
+  display: flex;
+  transition: ease-in-out 0.3s;
+}
+
 .inner-page .catalog-menu-list {
   padding-bottom: 5px;
 }
 
 .catalog-menu .menu-hide {
     display: none;
-    transition: ease-in-out 0.3s;
 }
+
 
 .catalog-menu:hover .catalog-menu-btn::after,
 .catalog-menu:focus .catalog-menu-btn::after {
     display: none;
-}
-
-.catalog-menu:hover .menu-hide,
-.catalog-menu:focus .menu-hide {
-    display: flex;
 }
 
 .catalog-menu-list li {
