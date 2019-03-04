@@ -642,6 +642,7 @@ footer {
     width: 1160px;
     margin: 0;
     margin-bottom: 40px;
+    z-index: 0;
 }
 
 .slider-item-list {
@@ -691,8 +692,7 @@ footer {
     margin-right: 40px;
 }
 
-.slide-1,
-.slide-3 {
+.slide-hidden {
     display: none;
 }
 
@@ -747,7 +747,7 @@ footer {
 
 .slider-item-content p {
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     padding: 0;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 15px;
@@ -1036,7 +1036,7 @@ footer {
     height: 40px;
 }
 
-.slider-controls button[aria-pressed="true"],
+.slider-controls .pressed,
 .slider-controls button:active {
     color: #f7e184;
     background-color: #000000;
@@ -1066,8 +1066,7 @@ footer {
     margin-right: 130px;
 }
 
-.services-slide-2,
-.services-slide-3 {
+.services-slide-hidden {
     display: none;
 }
 
